@@ -1,0 +1,7 @@
+server:
+  port: 8981
+spring:
+  application:
+    name: API-CATEGORY
+    cloud:
+      nacos: jilinxyz.site:8848
