@@ -1,0 +1,15 @@
+version: "3.9"
+
+networks:
+  yingxue_network:
+services:
+  nacos:
+    image: nacos/nacos-server
+    ports:
+      - "8848:8848"
+    environment:
+      - "JVM_XMS=246m"
+      - "JVM_XMX=256m"
+      - "MODE=standalone"
+    networks:
+      - yingxue_network
