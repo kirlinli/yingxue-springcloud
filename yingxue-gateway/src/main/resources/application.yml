@@ -1,7 +1,22 @@
 server:
-  port: 8984
+  port: 9999
 spring:
   application:
     name: API-GATEWAY
   cloud:
-    nacos: jilinxyz.site:8848
+    nacos: localhost:8848
+    gateway:
+      routers:
+        - id: admins_router
+#          uri: http:localhost:8980
+          uri: lb://API-ADMINS
+          predicates:
+            - Path=/admin/demos
+          filters:
+            - StripPrefix = 1 # 去掉前缀filter 值为int数字 1代表去掉一级路由
+      globalcors:   # 跨域配置处理
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"

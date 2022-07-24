@@ -4,4 +4,4 @@ spring:
   application:
     name: API-VIDEOS
   cloud:
-    nacos: http://jilinxyz.site:8848
+    nacos: localhost:8848

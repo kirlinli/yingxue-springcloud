@@ -4,4 +4,4 @@ spring:
   application:
     name: API-USERS
   cloud:
-    nacos: jilinxyz.site:8848
+    nacos: localhost:8848

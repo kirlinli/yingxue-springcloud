@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     private static final Logger log = LoggerFactory.getLogger(DemoController.class);
 
+    @RequestMapping
     @GetMapping
     public String test() {
         log.info("category hello");
